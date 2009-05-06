@@ -1,0 +1,89 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" 
+	template="layout/template.xhtml">
+	
+	<ui:param name="managedBeanCrud" value="#{marcaCrudVisao}" />
+	<ui:param name="nomeEntidade" value="Marca" />
+	<ui:param name="nomeEntidadePesquisa" value="Marcas" />
+
+	<ui:define name="blocoPesquisa">
+			<s:decorate id="boxPesquisaNome" template="layout/edit.xhtml">
+				<ui:define name="label">Nome</ui:define>
+				<h:inputText id="txtPesquisaNome" value="#{marcaCrudVisao.pesquisaNome}"  />
+			</s:decorate>
+			
+			<br/>
+			
+			<s:decorate id="boxBotaoPesquisar" template="layout/display.xhtml">
+				<a:commandButton action="#{marcaCrudVisao.pesquisar}" value="Pesquisar" reRender="formCrudGenerico"/>
+			</s:decorate>
+	</ui:define>
+	
+	
+	<ui:define name="blocoResultado">
+
+			<rich:dataTable id="tabelaMarcas" value="#{marcas}" var="marca" rows="10">
+			
+				<rich:column width="50px" sortable="true" style="text-align:center;" >
+					<f:facet name="header">
+						<h:outputText value="id" />
+					</f:facet>
+					<h:outputText value="#{marca.id}" />
+				</rich:column>
+				
+				<rich:column sortable="true">
+					<f:facet name="header">
+						<h:outputText value="Nome" />
+					</f:facet>
+					<h:outputText value="#{marca.nome}" />
+				</rich:column>
+				
+				<rich:column width="200px" style="text-align:center;">
+					<f:facet name="header">
+						<h:outputText value="Acao" />
+					</f:facet>
+					<a:commandLink action="#{marcaCrudVisao.editar}" value="Editar" reRender="formCrudGenerico"/>
+					<h:outputText value=" | " />
+					<a:commandLink action="#{marcaCrudVisao.excluir}" onclick="if (!confirm('Deseja realmente excluir a marca #{marca.nome}?')) return false" value="Excluir" reRender="formCrudGenerico" />
+				</rich:column>
+				
+			
+			</rich:dataTable>
+			
+			<rich:datascroller align="left" maxPages="10" for="tabelaMarcas" />
+			
+			<s:decorate id="boxBotaoNovo" template="layout/display.xhtml">
+				<a:commandButton action="#{marcaCrudVisao.novo}" value="Nova Marca" reRender="formCrudGenerico"/>
+			</s:decorate>
+
+	</ui:define>
+	
+	
+	<ui:define name="blocoCrud">
+
+		<h:panelGrid id="gridCrud" columns="1">
+
+			<h:inputHidden value="#{marca.id}" />
+			
+			<s:decorate id="boxNome" template="layout/edit.xhtml">
+				<ui:define name="label">Nome</ui:define>
+				<h:inputText id="txtNome" value="#{marca.nome}" required="true"  />
+			</s:decorate>
+			
+			<h:panelGroup>
+				<a:commandButton action="#{marcaCrudVisao.salvar}" value="#{marcaCrudVisao.estadoDeInclusao ? 'Incluir' : 'Salvar'}" reRender="formCrudGenerico" />
+				<a:commandButton action="#{marcaCrudVisao.pesquisar}" value="Voltar" reRender="formCrudGenerico" immediate="true" />
+			</h:panelGroup>
+
+		</h:panelGrid>
+
+	</ui:define>
+
+</ui:composition>

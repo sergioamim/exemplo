@@ -1,0 +1,860 @@
+/**************************************************************************/
+/*                         GENERAL                                        */
+/**************************************************************************/
+
+html * {
+    margin: 0;
+/*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
+}
+
+body {
+    background: #fff;
+    color: #333;
+    font: 75% Arial,Verdana,Helvetica,sans-serif;
+    line-height: 1.4em;
+    min-width: 800px;
+}
+
+.body {
+    margin: 0 17px 0;
+}
+
+ul {
+    padding-left: 15px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    color: #003366;
+    font-weight: bold;
+    font-size: 2.2em;
+    margin: .5em 0 .3em 0;
+}
+
+h2 {
+    margin-top: 1.0em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    margin-top: 1.0em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 0.5em;
+}
+
+a:link, a:visited, a:hover {
+    color: #6699cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a img {
+    border: 0;
+}
+
+/**************************************************************************/
+/*                         TABLES                                         */
+/**************************************************************************/
+
+table {
+    border: 1px solid #ccc;
+    border-width: 0 0 1px 1px;
+    width: 100%;
+    _border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+td table {
+    margin: 0;
+}
+
+td, th {
+    border: 1px solid #ccc;
+    border-width: 1px 1px 0 0;
+    font-size: 9pt;
+    line-height: 12px;
+    padding: 5px 6px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table table td {
+    border-width: 0 1px 0 0 ;
+}
+
+td.containerRow {
+    border-top: none;
+}
+
+.noborder {
+    border: 0;
+}
+
+table.noborder {
+    margin-top:0;
+    margin-bottom:0;
+}
+
+th {
+    background-color: #DDD;
+    color: #4b4b4b;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 2px 6px;
+}
+
+th a:link, th a:visited, th a:hover {
+    display: block;
+    text-decoration: none;
+    color: #4b4b4b;
+    width: 100%;
+}
+
+th a:hover {
+    text-decoration: underline;
+}
+
+tr.headingRow, tr.odd, tr.even {
+    background-color: #F6F6F6;
+}
+
+tr.headingRow:hover {
+    background-color: #FFFFF0;
+    cursor: pointer;
+}
+
+tr.highlighted, tr.highlited:hover {
+    background-color: #FFFFF0;
+}
+
+.plusstyle td {
+    border-bottom-color: #FFFFFF;
+}
+
+/*th.asc a, th.desc a {*/
+    /*background-position: right;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*th.asc a {*/
+    /*background-image: url(../images/skin/sorted_asc.gif);*/
+/*}*/
+/*th.desc a {*/
+    /*background-image: url(../images/skin/sorted_desc.gif);*/
+/*}*/
+
+/*th.asc a, th.desc a {*/
+    /*background-position: right;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+/*th.asc a {*/
+    /*background-image: url(../images/skin/sorted_asc.gif);*/
+/*}*/
+/*th.desc a {*/
+    /*background-image: url(../images/skin/sorted_desc.gif);*/
+/*}*/
+
+/* LIST */
+
+.list table {
+    border-collapse: collapse;
+}
+.list th, .list td {
+    border-left: 1px solid #ddd;
+}
+
+/* Product History */
+
+table.history {
+    border: none;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+table.history tr {
+    border: 1px solid #EEEEEE;
+    background: #F9F9F9;
+}
+
+/**************************************************************************/
+/*                         FORMS                                          */
+/**************************************************************************/
+
+form fieldset {
+    background: #FAFAFA;
+    border: 1px solid #EAEAEA;
+    margin: 0.5em 0;
+    padding: 0 8px 8px;
+}
+
+form fieldset.plain {
+    background: none;
+    border: none;
+}
+
+form div, form fieldset p, #loginform p {
+    margin-top: 1em;
+}
+
+form div label {
+    display: block;
+    font-weight: bold;
+}
+
+form div .info {
+    display: block;
+    font-size: 95%;
+    margin-top: 5px;
+}
+
+form h2, form h3 {
+    color: #336699;    
+}
+
+textarea {
+    width: 250px;
+    height: 150px;
+    vertical-align: top;
+}
+
+input, select, textarea {
+    margin: 2px 0;
+    padding: 0 2px;
+}
+
+input.checkbox {
+    margin-right: 4px;
+}
+
+textarea.license {
+    height: 7.1em;
+    width: 355px;
+    font-size: 11px;
+    _width: 355px;
+}
+
+select {
+    line-height: normal;
+    padding: 0;
+}
+
+/* LOGIN BOX */
+
+#loginform {
+    width: 500px;
+    padding: 0 20px 10px;
+    margin: 60px auto 0;
+    text-align: left;
+}
+
+#loginform .toplinks {
+    text-align:right;
+}
+
+#loginform input.text {
+    width: 300px;
+    _width: 270px;
+}
+
+#loginbutton {
+    border-right: none;
+}
+
+#rememberme {
+    border: 0;
+}
+
+/* Horizontal forms stuff */
+
+form div {
+    padding-left: 13em;
+}
+
+form div label {
+    display: inline;
+    float: left;
+    font-weight: normal;
+    left: -13em;
+    margin-right: -13em;
+    margin-top: 0.15em;
+    padding: 0 0 5px;
+    position: relative;
+    width: 13em;
+}
+
+form div.wideLabel {
+    padding-left: 15em;
+}
+
+form div.wideLabel label {
+    left: -15em;
+    margin-right: -15em;
+}
+
+/**************************************************************************/
+/*                      NAVIGATION MENU                                   */
+/**************************************************************************/
+
+#main-nav ul.navLeft {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+}
+
+#main-nav ul.navRight {
+    display: inline;
+    float: right;
+    margin-right: 10px;
+}
+
+#main-nav {
+    background: #FFFFFF;
+    border-bottom:1px solid #6699CC;
+    line-height: normal;
+    position: relative;
+    width: 100%;
+}
+
+#main-nav ul {
+    margin: 0;
+}
+
+#main-nav li {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+#main-nav .navRight li {
+    margin: 0 3px;
+}
+
+#main-nav li a {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    padding: 5px 10px 6px;
+    text-decoration: none;
+}
+
+#main-nav li a:hover {
+    color: #888888;
+}
+
+#main-nav li.on a {
+    color: #888888;
+}
+
+/**************************************************************************/
+/*                         TABBED HEADER                                  */
+/**************************************************************************/
+
+.banner {
+    height: 43px;
+    position: relative;
+}
+
+#tabs-nav {
+    bottom: -6px;
+    left: 165px;
+    list-style: none;
+    margin-top: 0;
+    margin-left: 0;
+    position: absolute;
+    z-index: 11;
+}
+
+#tabs-nav li {
+    height: 23px;
+    float: left;
+    display: inline;
+    margin-right:8px;
+    padding-left: 4px;
+}
+
+#tabs-nav a {
+    color: #FFFFFF;
+    display: block;
+    _display: inline; /* For IE6 */
+    font-size: 110%;
+    font-weight: bold;
+    height: 23px;
+    line-height: 23px;
+    overflow: hidden;
+    padding: 0 12px 0 9px;
+    _padding-top: 4px; /* For IE6 */
+    text-decoration: none;
+}
+
+#tabs-nav a:hover {
+    color: #6699CC;
+    text-decoration: none;
+}
+
+#tabs-nav li.on {
+    background: #FFFFFF url( ../images/tab_on_left.png ) top left no-repeat;
+}
+
+#tabs-nav li.on a {
+    background: #FFFFFF url( ../images/tab_on_right.png ) top right no-repeat;
+    color: #003366;
+}
+
+#tabs-nav li.on a:hover {
+    color: #003366;
+}
+
+#main-nav li a {
+    color: #003366;
+}
+
+#main-nav li a:hover {
+    color: #888888;
+}
+
+#main-nav .navRight a, #main-nav .navRight .on a {
+    padding: 0 2px;
+}
+
+#main-nav .navRight a:hover, #main-nav .navRight .on a {
+    background-color: transparent;
+}
+
+#welcome-link {
+    bottom: 5px;
+    color: #FFFFFF;
+    position: absolute;
+    right: 18px;
+}
+
+#welcome-link:hover {
+    text-decoration: none;
+}
+
+.navRight .pipe {
+    color: #999999;
+    font-size: 110%
+}
+
+/**************************************************************************/
+/*                            FOOTER                                      */
+/**************************************************************************/
+
+.footer {
+    font-size: 90%;
+    margin: 20px 15px 20px;
+    text-align: center;
+}
+
+
+/**************************************************************************/
+/*                     MESSAGES AND ERRORS                                */
+/**************************************************************************/
+
+.message {
+    background: #f3f8fc url(../images/information.gif) 8px 50% no-repeat;
+    border: 1px solid #b2d1ff;
+    color: #006dba;
+    margin: 10px 0 10px 0;
+    padding: 5px 5px 5px 30px
+}
+
+div.errors {
+    background: #fff3f3;
+    border: 1px solid red;
+    color: #cc0000;
+    margin: 10px 0 10px 0;
+    padding: 5px 0 5px 0;
+}
+
+div.errors ul {
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+div.errors li {
+    background: url(../images/exclamation.gif) 8px 0% no-repeat;
+    line-height: 16px;
+    margin: 2px 0;
+    padding-left: 30px;
+}
+
+.error select, select.error {
+    border: 1px solid red;
+}
+.error input, input.error {
+    border: 1px solid red;
+}
+
+.err {
+    color: #BF2323;
+}
+
+.warn {
+    color: #247F07;
+}
+
+div.warning {
+    background: #FFFFDF;
+    border: 1px solid #FEFF6F;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+/**************************************************************************/
+/*                       ACTION BUTTONS                                   */
+/**************************************************************************/
+
+.buttons {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #036;
+    font-size: 12px;
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.buttons input {
+    background: #fff;
+    border: 0;
+    color: #036;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 3px;
+    overflow: visible;
+    padding: 2px 6px;
+}
+.buttons input.delete {
+    background: transparent url(../images/skin/database_delete.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.edit {
+    background: transparent url(../images/skin/database_edit.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.save {
+    background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+
+img.action {
+    cursor: hand;
+    c\ursor: pointer;
+}
+
+span.action {
+    color: #999999;
+}
+
+span.action a {
+    color: #999999;
+}
+
+span.action a:hover {
+    color: #6699CC;
+}
+
+span.delete a {
+    font-size: 11px;
+}
+
+span.delete a:hover {
+    text-decoration: none;
+}
+
+span.move-up a img {
+    border: 0;
+}
+
+/**************************************************************************/
+/*                              MISC                                      */
+/**************************************************************************/
+
+.title {
+    background-color: #036;
+    padding: 3px 8px;
+}
+
+.pipes {
+    color: #ccc !important;
+}
+
+.greeting {
+    color: white;
+    float: right;
+    position: relative;
+    top: -33px;
+}
+
+.smalltext {
+    color: #999;
+    padding-top: 13px;
+    padding-bottom: 6px;
+    font-size: 11px;
+}
+
+.bottom {
+    margin-top: 4px;
+}
+
+#last_updated {
+    padding-top: 6px;
+}
+
+.banner {
+    background-color: #003366;
+    padding: 3px 8px;
+}
+
+.prompt {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.greeting a {
+    color: white;
+    text-decoration: underline;
+}
+
+.quotelinks {
+    border:1px solid #ccc;
+    padding:5px;
+}
+
+.spinner {
+    padding: 5px;
+    position: absolute;
+    right: 0;
+}
+
+.clearer {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 1px;
+    line-height: 1px;
+    margin-bottom: -1px;
+}
+
+img.pdf {
+    vertical-align: top;
+}
+
+/* PAGINATION */
+
+.paginateButtons {
+    background-color: #fff;
+    color: #666;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 10px 3px;
+}
+.paginateButtons a {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #ccc;
+    margin: 0 3px;
+    padding: 3px 6px;
+    font-weight: normal;
+}
+.paginateButtons .currentStep {
+    color: #000;
+    font-weight: bold;
+}
+.paginateButtons span {
+    padding: 2px 6px;
+}
+
+/* PROP */
+
+.prop {
+    padding: 5px;
+}
+.prop .name {
+    padding-top: 7px;
+    position: relative;
+    text-align: left;
+    top: 5px;
+    white-space: nowrap;
+    width: 15%;
+}
+.prop .value {
+    text-align: left;
+    width: 85%;
+}
+
+/* BETA HEADER */
+
+.beta-header {
+    background-color: #FFFFBB;
+    line-height: 2em;
+    _line-height: 1.8em; /* IE6 */
+    text-align: center;
+}
+
+.beta-header input {
+    font-size: 95%;
+}
+
+#feedback_form {
+    display: inline;}
+
+#feedback_form input {
+    margin: 0;
+}
+
+/* CONTACTS */
+
+div.contacts {
+   margin-top: 5px; 
+}
+
+div.contacts td {
+    color: #666666;
+    padding-left: 0;
+}
+
+h2 .links {
+    font-size: 65%;
+    _font-size: 50%; /* IE6 */
+    font-weight: normal;
+    margin-left: 15px;
+}
+
+/**************************************************************************/
+/*                          DIALOG BOX                                    */
+/**************************************************************************/
+
+.dialog table {
+    width: 1%;
+    border: 1px solid #ccc;
+}
+
+.dialog table td.name {
+    border: none;
+}
+
+.dialogbox .ui-dialog,
+    .dialogbox.ui-dialog {
+    background: #ffffff;
+    color: #222222;
+    border: 4px solid #d3d3d3;
+}
+
+.dialogbox .ui-dialog .ui-dialog-titlebar,
+    .dialogbox.ui-dialog .ui-dialog-titlebar {
+    padding: 0;
+    height: 28px;
+    _height: 29px;
+    border-bottom: 1px solid #d3d3d3;
+    background-color: #ccc;
+}
+
+.dialogbox .ui-draggable .ui-dialog-titlebar,
+    .dialogbox.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+}
+
+.dialogbox .ui-draggable-disabled .ui-dialog-titlebar,
+    .dialogbox.ui-draggable-disabled .ui-dialog-titlebar {
+    cursor: default;
+}
+
+.dialogbox .ui-dialog .ui-dialog-title,
+    .dialogbox.ui-dialog .ui-dialog-title {
+    margin-left: 5px;
+    color: #4b4b4b;
+    font-weight: bold;
+    position: relative;
+    top: 7px;
+    left: 4px;
+    font-size: 1.1em;
+}
+
+.dialogbox .ui-dialog .ui-dialog-content,
+    .dialogbox.ui-dialog .ui-dialog-content {
+    margin: 1.2em;
+    background: #ffffff;
+    color: #222222;
+
+}
+
+.dialogbox .ui-dialog .ui-dialog-buttonpane,
+    .dialogbox.ui-dialog .ui-dialog-buttonpane {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid #d3d3d3;
+}
+
+.dialogbox .ui-dialog .ui-dialog-buttonpane button,
+    .dialogbox.ui-dialog .ui-dialog-buttonpane button {
+
+    margin: .5em 0 .5em 8px;
+    color: #555555;
+    font-size: 1.1em;
+    border: 1px solid #d3d3d3;
+    cursor: pointer;
+    padding: .2em .6em .3em .6em;
+    line-height: 1.4em;
+}
+
+/* We are not displaying the close button */
+
+.dialogbox .ui-dialog .ui-dialog-titlebar-close,
+    .dialogbox.ui-dialog .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.dialogbox .ui-dialog .ui-dialog-titlebar-close span,
+    .dialogbox.ui-dialog .ui-dialog-titlebar-close span {
+    display: none;
+}
+
+.dialogbox .ui-dialog .ui-dialog-titlebar-close-hover,
+    .dialogbox.ui-dialog .ui-dialog-titlebar-close-hover {
+    display: none;
+}
+
+/* Dialog handle styles */
+
+.dialogbox .ui-dialog .ui-resizable-n,
+    .dialogbox.ui-dialog .ui-resizable-n { cursor: n-resize; height: 6px; width: 100%; top: 0; left: 0;}
+
+.dialogbox .ui-dialog .ui-resizable-s,
+    .dialogbox.ui-dialog .ui-resizable-s { cursor: s-resize; height: 8px; width: 100%; bottom: 0; left: 0}
+
+.dialogbox .ui-dialog .ui-resizable-e,
+    .dialogbox.ui-dialog .ui-resizable-e { cursor: e-resize; width: 7px; right: 0; top: 0; height: 100%}
+
+.dialogbox .ui-dialog .ui-resizable-w,
+    .dialogbox.ui-dialog .ui-resizable-w { cursor: w-resize; width: 7px; left: 0; top: 0; height: 100%;}
+
+.dialogbox .ui-dialog .ui-resizable-se,
+    .dialogbox.ui-dialog .ui-resizable-se { cursor: se-resize; width: 9px; height: 9px; right: 0; bottom: 0;}
+
+.dialogbox .ui-dialog .ui-resizable-sw,
+    .dialogbox.ui-dialog .ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: 0; bottom: 0;}
+
+.dialogbox .ui-dialog .ui-resizable-nw,
+    .dialogbox.ui-dialog .ui-resizable-nw { cursor: nw-resize; width: 9px; height: 29px; left: 0; top: 0;}
+
+.dialogbox .ui-dialog .ui-resizable-ne,
+    .dialogbox.ui-dialog .ui-resizable-ne { cursor: ne-resize; width: 9px; height: 29px; right: 0; top: 0;}

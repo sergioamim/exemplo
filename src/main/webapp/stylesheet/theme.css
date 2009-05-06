@@ -1,0 +1,483 @@
+html {
+	overflow-y: scroll;
+	margin: 0;
+}
+
+body {
+	font-size: 12px;
+	margin: 0px;
+	background: #fff;
+    color: #333;
+    font: 75% Arial,Verdana,Helvetica,sans-serif;
+    line-height: 1.4em;
+    min-width: 800px;
+}
+
+.body {
+    margin: 0 17px 0;
+}
+
+ul {
+    padding-left: 15px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    color: #003366;
+    font-weight: bold;
+    font-size: 2.2em;
+    margin: .5em 0 .3em 0;
+}
+
+h2 {
+    margin-top: 1.0em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    margin-top: 1.0em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 0.5em;
+}
+
+a:link, a:visited, a:hover {
+    color: #6699cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a img {
+    border: 0;
+}
+
+a img {
+	border: none;
+}
+
+h1 {
+	font-size: 1.6em;
+	margin-top: 0;
+}
+
+
+**************************************************************************/
+/*                      NAVIGATION MENU                                   */
+/**************************************************************************/
+
+#main-nav ul.navLeft {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+}
+
+#main-nav ul.navRight {
+    display: inline;
+    float: right;
+    margin-right: 10px;
+}
+
+#main-nav {
+    background: #FFFFFF;
+    border-bottom:1px solid #6699CC;
+    line-height: normal;
+    position: relative;
+    width: 100%;
+}
+
+#main-nav ul {
+    margin: 0;
+}
+
+#main-nav li {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+#main-nav .navRight li {
+    margin: 0 3px;
+}
+
+#main-nav li a {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    padding: 5px 10px 6px;
+    text-decoration: none;
+}
+
+#main-nav li a:hover {
+    color: #888888;
+}
+
+#main-nav li.on a {
+    color: #888888;
+}
+
+/**************************************************************************/
+/*                         TABBED HEADER                                  */
+/**************************************************************************/
+
+
+#tabs-nav {
+    bottom: -6px;
+    left: 10px;
+    list-style: none;
+    margin-top: 0;
+    margin-left: 0;
+    position: absolute;
+    z-index: 11;
+}
+
+#tabs-nav li {
+    height: 23px;
+    float: left;
+    display: inline;
+    margin-right:8px;
+    padding-left: 4px;
+}
+
+#tabs-nav a {
+    color: #FFFFFF;
+    display: block;
+    _display: inline; /* For IE6 */
+    font-size: 110%;
+    font-weight: bold;
+    height: 23px;
+    line-height: 23px;
+    overflow: hidden;
+    padding: 0 12px 0 9px;
+    _padding-top: 4px; /* For IE6 */
+    text-decoration: none;
+}
+
+#tabs-nav a:hover {
+    color: #6699CC;
+    text-decoration: none;
+}
+
+#tabs-nav li.on {
+    background: #FFFFFF url( ../img/tab_on_left.png ) top left no-repeat;
+}
+
+#tabs-nav li.on a {
+    background: #FFFFFF url( ../img/tab_on_right.png ) top right no-repeat;
+    color: #003366;
+}
+
+#tabs-nav li.on a:hover {
+    color: #003366;
+}
+
+#main-nav li a {
+    color: #003366;
+}
+
+#main-nav li a:hover {
+    color: #888888;
+}
+
+#main-nav .navRight a, #main-nav .navRight .on a {
+    padding: 0 2px;
+}
+
+#main-nav .navRight a:hover, #main-nav .navRight .on a {
+    background-color: transparent;
+}
+
+#welcome-link {
+    bottom: 5px;
+    color: #FFFFFF;
+    position: absolute;
+    right: 18px;
+}
+
+#welcome-link:hover {
+    text-decoration: none;
+}
+
+.navRight .pipe {
+    color: #999999;
+    font-size: 110%
+}
+
+/**************************************************************************/
+/*                              MISC                                      */
+/**************************************************************************/
+
+.title {
+    background-color: #036;
+    padding: 3px 8px;
+}
+
+.pipes {
+    color: #ccc !important;
+}
+
+.greeting {
+    color: white;
+    float: right;
+    position: relative;
+    top: -33px;
+}
+
+.smalltext {
+    color: #999;
+    padding-top: 13px;
+    padding-bottom: 6px;
+    font-size: 11px;
+}
+
+.bottom {
+    margin-top: 4px;
+}
+
+#last_updated {
+    padding-top: 6px;
+}
+
+.banner {
+    height: 80px;
+    position: relative;
+    background-color: #CCCCCC;
+    padding: 3px 8px;
+}
+
+.prompt {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.greeting a {
+    color: white;
+    text-decoration: underline;
+}
+
+.quotelinks {
+    border:1px solid #ccc;
+    padding:5px;
+}
+
+.spinner {
+    padding: 5px;
+    position: absolute;
+    right: 0;
+}
+
+.clearer {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 1px;
+    line-height: 1px;
+    margin-bottom: -1px;
+}
+
+img.pdf {
+    vertical-align: top;
+}
+
+
+input[type=submit], input[type=button] {
+	font-size: 10px;
+	margin: 5px 5px 5px 0;
+	cursor: pointer;
+}
+
+input[type=text], input[type=password], textarea {
+	font-size: 11px;
+	padding-left: 1px;
+}
+
+.tableControl, .actionButtons {
+	width: 100%;
+}
+
+.tableControl a {
+	padding-left: 10px;
+}
+
+.tableControl {
+	text-align: right;
+}
+
+.footer {
+	text-align: center;
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+
+.rich-table {
+	width: 100%;
+}
+
+.body {
+	padding: 30px;
+}
+
+.columnHeader:hover {
+	color: #FF6600;
+}
+
+.message {
+	padding: 5px;
+	list-style: none;
+	border: 0;
+	background: none;
+	padding: 0;
+	color: #000000;
+	margin: 5px 0 8px 0;
+	font-size: 12px;
+}
+
+.message li {
+	background: no-repeat left center;
+	padding-top: 1px;
+	padding-left: 20px;
+	margin-left: 3px;
+}
+
+.message li.infomsg {
+	background-image: url(../img/msginfo.png);
+}
+
+.message li.errormsg {
+	background-image: url(../img/msgerror.png);
+}
+
+.message li.warnmsg {
+	background-image: url(../img/msgwarn.png);
+}
+
+.name {
+	vertical-align: top;
+	font-weight: bold;
+	width: 115px;
+	float: left;
+	padding: 5px;
+	margin-top: 3px;
+	clear: left;
+}
+
+.value {
+	float: left;
+	padding: 5px;
+}
+
+.error {
+	float: left;
+	padding: 5px;
+}
+
+.errors {
+	color: red;
+	vertical-align: middle;
+}
+
+img.errors {
+	padding-right: 5px;
+}
+
+.errors input, .errors textarea {
+	border: 1px solid red !important;
+}
+
+.required {
+	color: red;
+	padding-left: 2px;
+}
+
+.rich-stglpanel-body {
+	overflow: auto;
+} 
+
+/* the specificity here is necessary to override the defaults */
+.rich-panel .rich-panel-header,
+.rich-stglpanel .rich-stglpanel-header {
+	padding: 2px 3px;
+}
+
+
+select {
+	font-size: 12px;
+}
+
+.rich-panel input[type=submit], .rich-panel input[type=button],
+.rich-tabpanel input[type=submit], .rich-tabpanel input[type=button] {
+	margin-bottom: 0;
+}
+
+.tableControl input[type=submit], .tableControl input[type=button], .tableControl select {
+	margin: 5px 0 5px 5px;
+}
+
+/* I don't know why this is necessary, but the select is off by a pixel on the top and is padding too much on the left */
+.tableControl select {
+	margin-left: 2px;
+	position: relative;
+	top: 1px;
+}
+
+.actionButtons {
+	padding-left: 1px;
+}
+
+.actionButtons select {
+	margin: 5px 5px 5px 0;
+	vertical-align: bottom;
+}
+
+.rich-datalist {
+	list-style: square;
+	margin: 6px 0 1px 0;
+	padding-left: 18px;
+}
+
+.rich-list-item {
+	padding-bottom: 4px;
+}
+
+div.info {
+	font-size: 1.2em;
+}
+
+ul.bullets {
+	list-style: square;
+}
+
+ul.bullets li {
+	padding-bottom: 2px;
+}
+
+td.action {
+	text-align: center;
+	width: 8em;
+	white-space: nowrap;
+}
+
+td.action a {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+
+.painel {
+    background: #FAFAFA;
+    border: 1px solid #EAEAEA;
+    margin: 0.5em 0;
+    padding: 0 8px 8px;
+    margin-top: 1em;
+    font-size: 95%;
+    color: #336699;    
+}
+

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+
+<Configure class="org.mortbay.jetty.webapp.WebAppContext">
+
+	<Array id="plusConfig" type="java.lang.String">
+		<Item>org.mortbay.jetty.webapp.WebInfConfiguration</Item>
+		<Item>org.mortbay.jetty.plus.webapp.EnvConfiguration</Item>
+		<Item>org.mortbay.jetty.plus.webapp.Configuration</Item>
+		<Item>org.mortbay.jetty.webapp.JettyWebXmlConfiguration</Item>
+		<Item>org.mortbay.jetty.webapp.TagLibConfiguration</Item>
+	</Array>
+
+	<New id="DSExemplo" class="org.mortbay.jetty.plus.naming.Resource">
+		<Arg></Arg>
+		<Arg>jdbc/DSExemplo</Arg>
+		<Arg>
+			<New class="com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource">
+				<Set name="DatabaseName">exemplo</Set>
+				<Set name="createDatabase">create</Set>
+				<Set name="Url">jdbc:mysql://localhost:3306/exemplo</Set>
+				<Set name="User">root</Set>
+				<Set name="Password">123456</Set>
+			 	<Set name="configurationClasses"><Ref id="plusConfig"/></Set>  
+			</New>
+		</Arg>
+	</New>
+
+</Configure>
+
+
+

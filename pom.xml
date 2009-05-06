@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>br.com.exemplo</groupId>
+    <artifactId>exemplo</artifactId>
+    <packaging>war</packaging>
+    <version>1.1.0</version>
+    <name>Exemplo</name>
+    <url>http://www.exemplo.com.br</url>
+    <repositories>
+		<repository>
+            <id>jboss-repo</id>
+            <name>JBoss Repo</name>
+            <url>http://repository.jboss.org/maven2</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+        </repository>
+    </repositories>
+    <properties>
+        <seam.version>2.1.1.GA</seam.version>
+        <jboss.el.version>2.0.0.GA</jboss.el.version>
+        <facelets.version>1.1.14</facelets.version>
+        <jsf.version>1.2_12</jsf.version>
+        <richfaces.version>3.3.0.GA</richfaces.version>		
+        <hibernate.validator.version>3.1.0.GA</hibernate.validator.version>
+        <hibernate.emanager.version>3.4.0.GA</hibernate.emanager.version>
+        <hibernate.annotations.version>3.4.0.GA</hibernate.annotations.version>
+		<log4j.version>1.2.13</log4j.version>
+        <concurrent.version>1.3.4</concurrent.version>
+    </properties>
+    <dependencies>
+	
+        <!-- SEAM -->
+        <dependency>
+            <groupId>org.jboss.seam</groupId>
+            <artifactId>jboss-seam</artifactId>
+            <version>${seam.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.seam</groupId>
+            <artifactId>jboss-el</artifactId>
+            <version>${jboss.el.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.seam</groupId>
+            <artifactId>jboss-seam-ui</artifactId>
+            <version>${seam.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jsp-api</artifactId>
+                    <groupId>javax.servlet.jsp</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.seam</groupId>
+            <artifactId>jboss-seam-ioc</artifactId>
+            <version>${seam.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>servlet-api</artifactId>
+                    <groupId>javax.servlet</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.seam</groupId>
+            <artifactId>jboss-seam-debug</artifactId>
+            <version>${seam.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>servlet-api</artifactId>
+                    <groupId>javax.servlet</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- JSF AND FACELETS -->
+        <dependency>
+            <groupId>com.sun.facelets</groupId>
+            <artifactId>jsf-facelets</artifactId>
+            <version>${facelets.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>${jsf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <version>${jsf.version}</version>
+        </dependency>
+
+        <!-- RICH FACES -->
+        <dependency>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>richfaces-ui</artifactId>
+            <version>${richfaces.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jstl</artifactId>
+                    <groupId>javax.servlet</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- HIBERNATE--> 
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate.validator.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.emanager.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-annotations</artifactId>
+            <version>${hibernate.annotations.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>concurrent</groupId>
+            <artifactId>concurrent</artifactId>
+            <version>${concurrent.version}</version>
+        </dependency>
+
+		 <dependency>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-log4j12</artifactId>
+	            <version>1.5.0</version>
+	     </dependency>
+        
+        <!-- COMMONS -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.1</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>servlet-api</artifactId>
+                    <groupId>javax.servlet</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <!-- MYSQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.6</version>
+        </dependency>
+
+		<!-- JUNIT -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.5</version>
+            <scope>test</scope>
+        </dependency>
+
+		<!-- TestNG 
+        <dependency>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>5.6</version>
+		    <scope>test</scope>
+    	</dependency>
+ -->        
+
+        
+        
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+        <version>6.1.10</version>
+        <configuration>
+                <scanIntervalSeconds>10</scanIntervalSeconds>
+                <stopKey>foo</stopKey>
+                <stopPort>9999</stopPort>
+        </configuration>
+        <executions>
+                <execution>
+                        <id>start-jetty</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                                <goal>run</goal>
+                        </goals>
+                        <configuration>
+                                <scanIntervalSeconds>1</scanIntervalSeconds>
+                                <daemon>false</daemon>
+                                <webDefaultXml>${basedir}/webdefault.xml</webDefaultXml>
+                        </configuration>
+                </execution>
+                <execution>
+                        <id>stop-jetty</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                                <goal>stop</goal>
+                        </goals>
+                </execution>
+        </executions>             </plugin>
+        </plugins>
+    </build>
+</project>
