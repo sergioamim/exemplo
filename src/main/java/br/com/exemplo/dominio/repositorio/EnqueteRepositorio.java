@@ -54,4 +54,5 @@ public class EnqueteRepositorio {
 	public List<Enquete> listar(){
 		return dataMapper.listar(Enquete.class);
 	}
+	
 }

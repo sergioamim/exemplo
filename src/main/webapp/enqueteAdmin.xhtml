@@ -11,8 +11,8 @@
 	
 	<ui:param name="managedBeanCrud" value="#{enqueteManageBean}" />
 	<ui:param name="nomeEntidade" value="Enquete" />
-	<ui:param name="nomeEntidadePesquisa" value="Enquetes" />
-	
+	<ui:param name="nomeEntidadePesquisa" value="Enquete" />
+
 	<ui:define name="blocoPesquisa">
 			<s:decorate id="boxPesquisaNome" template="layout/edit.xhtml">
 				<ui:define name="label">Pergunta</ui:define>
@@ -22,9 +22,10 @@
 			<br/>
 			
 			<s:decorate id="boxBotaoPesquisar" template="layout/display.xhtml">
-				<a:commandButton action="#{enqueteManageBean.pesquisar}" value="Pesquisar" reRender="formCrudGenerico"/>
+				<a:commandButton action="#{enqueteManageBean.pesquisar}" value="Pesquisar" reRender="tabelaMarcas"/>
 			</s:decorate>
 	</ui:define>
+	
 	
 	<ui:define name="blocoResultado">
 
@@ -39,9 +40,18 @@
 				
 				<rich:column sortable="true">
 					<f:facet name="header">
-						<h:outputText value="Pergunta" />
+						<h:outputText value="Nome" />
 					</f:facet>
 					<h:outputText value="#{enquete.pergunta}" />
+				</rich:column>
+				
+				<rich:column sortable="true">
+					<f:facet name="header">
+						<h:outputText value="Data" />
+					</f:facet>
+					<h:outputText value="#{enquete.dataInclusao}">
+						<s:convertDateTime pattern="dd/MM/yyyy HH:mm"/>
+					</h:outputText>
 				</rich:column>
 				
 				<rich:column width="200px" style="text-align:center;">
@@ -50,9 +60,10 @@
 					</f:facet>
 					<a:commandLink action="#{enqueteManageBean.editar}" value="Editar" reRender="formCrudGenerico"/>
 					<h:outputText value=" | " />
-					<a:commandLink action="#{enqueteManageBean.excluir}" onclick="if (!confirm('Deseja realmente excluir a marca #{enquete.pergunta}?')) return false" value="Excluir" reRender="formCrudGenerico" />
+					<a:commandLink action="#{enqueteManageBean.excluir}" onclick="if (!confirm('Deseja realmente excluir a enquete #{enquete.pergunta}?')) return false" value="Excluir" reRender="formCrudGenerico" />
 				</rich:column>
 				
+			
 			</rich:dataTable>
 			
 			<rich:datascroller align="left" maxPages="10" for="tabelaMarcas" />
@@ -70,11 +81,9 @@
 
 			<h:inputHidden value="#{enquete.id}" />
 			
-			<h:inputHidden value="#{enquete.dataInclusao}" />
-			
 			<s:decorate id="boxNome" template="layout/edit.xhtml">
 				<ui:define name="label">Pergunta</ui:define>
-				<h:inputText id="txtPergunta" value="#{enquete.pergunta}" required="true"  />
+				<h:inputText id="txtNome" value="#{enquete.pergunta}" required="true"  />
 			</s:decorate>
 			
 			<h:panelGroup>
