@@ -7,7 +7,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:a="http://richfaces.org/a4j"
 	xmlns:rich="http://richfaces.org/rich" 
-	template="layout/template.xhtml">
+	template="layout/crudTemplate.xhtml">
 	
 	<ui:param name="managedBeanCrud" value="#{enqueteManageBean}" />
 	<ui:param name="nomeEntidade" value="Enquete" />
@@ -74,7 +74,7 @@
 			
 			<s:decorate id="boxNome" template="layout/edit.xhtml">
 				<ui:define name="label">Pergunta</ui:define>
-				<h:inputText id="txtNome" value="#{enquete.pergunta}" required="true"  />
+				<h:inputText id="txtPergunta" value="#{enquete.pergunta}" required="true"  />
 			</s:decorate>
 			
 			<h:panelGroup>

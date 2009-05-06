@@ -7,7 +7,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:a="http://richfaces.org/a4j"
 	xmlns:rich="http://richfaces.org/rich" 
-	template="layout/template.xhtml">
+	template="layout/crudTemplate.xhtml">
 	
 	<ui:param name="managedBeanCrud" value="#{marcaCrudVisao}" />
 	<ui:param name="nomeEntidade" value="Marca" />
@@ -22,7 +22,7 @@
 			<br/>
 			
 			<s:decorate id="boxBotaoPesquisar" template="layout/display.xhtml">
-				<a:commandButton action="#{marcaCrudVisao.pesquisar}" value="Pesquisar" reRender="formCrudGenerico"/>
+				<a:commandButton action="#{marcaCrudVisao.pesquisar}" value="Pesquisar" reRender="tabelaMarcas"/>
 			</s:decorate>
 	</ui:define>
 	

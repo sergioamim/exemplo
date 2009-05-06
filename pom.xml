@@ -7,6 +7,7 @@
     <version>1.1.0</version>
     <name>Exemplo</name>
     <url>http://www.exemplo.com.br</url>
+    
     <repositories>
 		<repository>
             <id>jboss-repo</id>
@@ -18,6 +19,7 @@
 			</releases>
         </repository>
     </repositories>
+    
     <properties>
         <seam.version>2.1.1.GA</seam.version>
         <jboss.el.version>2.0.0.GA</jboss.el.version>

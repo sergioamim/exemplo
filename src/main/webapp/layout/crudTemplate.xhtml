@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view contentType="text/html" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a="http://richfaces.org/a4j"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:rich="http://richfaces.org/rich">
+	
+	<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Exemplo</title>
+	<link rel="shortcut icon" href="#{request.contextPath}/favicon.ico" />
+	<a:loadStyle src="/stylesheet/theme.css" />
+	</head>
+
+	<body>
+
+	<ui:include src="menu.xhtml">
+		<ui:param name="nomeDoProjeto" value="Exemplo" />
+	</ui:include>
+
+	<div class="body">
+		<a:form id="formCrudGenerico">
+			<h:messages id="messages" globalOnly="true" styleClass="message"
+				errorClass="errormsg" infoClass="infomsg" warnClass="warnmsg"
+				rendered="#{showGlobalMessages != 'false'}" />
+	
+	
+			<h:panelGroup rendered="#{managedBeanCrud.estadoDePesquisa}" >
+				<h2>Pesquisa de #{nomeEntidadePesquisa}</h2>
+				<rich:panel id="painelDePesquisa" styleClass="painel">
+					<ui:insert name="blocoPesquisa" />
+				</rich:panel>
+				
+				<br/>
+				
+				<h2>#{nomeEntidadePesquisa} encontradas</h2>
+				<rich:panel id="painelDeResultado" styleClass="painel">
+					<ui:insert name="blocoResultado" />
+				</rich:panel>
+			</h:panelGroup>
+			
+			<h:panelGroup rendered="#{managedBeanCrud.estadoDeInclusao || managedBeanCrud.estadoDeEdicao}">
+				<h2>#{managedBeanCrud.estadoDeInclusao ? 'Inclusão' : 'Edição'} de #{nomeEntidade}</h2>
+				<rich:panel id="painelDeInclusao" styleClass="painel">
+					<ui:insert name="blocoCrud" />
+				</rich:panel>
+			</h:panelGroup>
+		</a:form>
+	</div>
+
+	<div class="footer">Exemplos de arquitetura seam</div>
+
+	</body>
+	</html>
+</f:view>

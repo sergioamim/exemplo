@@ -17,15 +17,12 @@
                 <li id="tab-products" class="on">
                     <s:link view="/marcaCrud.xhtml" value="Marcas" propagation="none"/>
                 </li>
-                <li id="tab-studio">
-                    <s:link view="/categoriaCrud.xhtml" value="Categorias" propagation="none"/>
-                </li>
-                <li id="tab-about">
-                    <s:link view="/produtoCrud.xhtml" value="Produtos" propagation="none"/>
+                 <li id="tab-studio">
+                    <s:link view="/enqueteAdmin.xhtml" value="Enquete" propagation="none"/>
                 </li>
             </ul>
             
-                <h:outputText id="welcome-link" value="Welcome, #{identity.username}!" rendered="#{identity.loggedIn}"/>        
+             <h:outputText id="welcome-link" value="Welcome, #{identity.username}!" rendered="#{identity.loggedIn}"/>        
             
         </div>
     

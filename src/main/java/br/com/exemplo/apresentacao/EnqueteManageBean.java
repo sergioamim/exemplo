@@ -38,17 +38,12 @@ public class EnqueteManageBean {
 
 	private EstadoPaginaEnum estadoAtualPagina = EstadoPaginaEnum.PESQUISA;
 
-	/*public void carregarEnqueteAtual() {
-		enquete = enqueteRepositorio.recuperaAtual();
-	}*/
-
 	public void salvar() {
-		System.out.println("teste");
 		try {
 			definirInclusaoOuEdicao();
 			pesquisar();
 		} catch (EntidadeJaCadastradaException e) {
-			facesMessages.addToControl("txtNome", e.getMessage());
+			facesMessages.addToControl("txtPergunta", e.getMessage());
 		}
 	}
 
