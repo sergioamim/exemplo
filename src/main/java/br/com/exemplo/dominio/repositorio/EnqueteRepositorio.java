@@ -8,7 +8,6 @@ import org.jboss.seam.annotations.Name;
 import org.jboss.seam.annotations.Transactional;
 
 import br.com.exemplo.dominio.entidade.Enquete;
-import br.com.exemplo.dominio.entidade.Marca;
 import br.com.exemplo.dominio.exception.EntidadeJaCadastradaException;
 
 @Name("enqueteRepositorio")
@@ -26,6 +25,7 @@ public class EnqueteRepositorio {
 		dataMapper.salvar(enquete);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Transactional
 	public Enquete recuperaAtual(){
 		List<Enquete> enquetes = dataMapper.getEntityManager().createQuery("select e from Enquete e order by e.dataInclusao asc").getResultList();

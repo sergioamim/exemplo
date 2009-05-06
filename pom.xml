@@ -33,6 +33,27 @@
     <dependencies>
 	
         <!-- SEAM -->
+         <dependency>  
+             <groupId>org.drools</groupId>  
+             <artifactId>drools-core</artifactId>  
+             <version>4.0.7</version>  
+         </dependency>  
+         <dependency>  
+             <groupId>org.drools</groupId>  
+             <artifactId>drools-compiler</artifactId>  
+             <version>4.0.7</version>  
+             <exclusions>  
+                 <exclusion>  
+                     <groupId>xerces</groupId>  
+                     <artifactId>xercesImpl</artifactId>  
+                 </exclusion>  
+                 <exclusion>  
+                     <groupId>xml-apis</groupId>  
+                     <artifactId>xml-apis</artifactId>  
+                 </exclusion>  
+             </exclusions>  
+         </dependency> 
+       
         <dependency>
             <groupId>org.jboss.seam</groupId>
             <artifactId>jboss-seam</artifactId>

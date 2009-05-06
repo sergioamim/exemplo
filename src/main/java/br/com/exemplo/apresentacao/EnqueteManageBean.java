@@ -13,7 +13,6 @@ import org.jboss.seam.annotations.datamodel.DataModelSelection;
 import org.jboss.seam.faces.FacesMessages;
 
 import br.com.exemplo.dominio.entidade.Enquete;
-import br.com.exemplo.dominio.entidade.Marca;
 import br.com.exemplo.dominio.exception.EntidadeJaCadastradaException;
 import br.com.exemplo.dominio.repositorio.EnqueteRepositorio;
 
@@ -83,7 +82,7 @@ public class EnqueteManageBean {
 		if (enquete.getId() == null) {
 			enqueteRepositorio.adicionar(enquete);
 			facesMessages
-					.add("Marca #{enquete.pergunta} incluída com sucesso!");
+					.add("Marca #{enquete.pergunta} incluida com sucesso!");
 		} else {
 			enqueteRepositorio.atualizar(enquete);
 			facesMessages

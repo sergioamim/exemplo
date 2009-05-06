@@ -1,7 +1,6 @@
 package br.com.exemplo.test;
 
 import org.jboss.seam.annotations.In;
-import org.junit.Test;
 
 import br.com.exemplo.dominio.entidade.Enquete;
 import br.com.exemplo.dominio.exception.EntidadeJaCadastradaException;
@@ -16,7 +15,7 @@ public class TestEnquete {
 	public void testNovaEnquete() {
 		
 		Enquete enquete = new Enquete();
-		enquete.setPergunta("Ser√°?");
+		enquete.setPergunta("Será?");
 		enquete.setDataInclusao(new java.util.Date());
 		
 		try {

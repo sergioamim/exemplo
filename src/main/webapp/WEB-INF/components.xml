@@ -31,15 +31,25 @@
 
 	<transaction:entity-transaction entity-manager="#{entityManager}"/>
 
-	<event type="org.jboss.seam.security.notLoggedIn">
-		<action execute="#{redirect.captureCurrentView}" />
-	</event>
-	<event type="org.jboss.seam.security.loginSuccessful">
-		<action execute="#{redirect.returnToCapturedView}" />
-	</event>
+    <drools:rule-base name="securityRules">
+       <drools:rule-files>
+          <value>/security.drl</value>
+       </drools:rule-files>
+    </drools:rule-base>
 
-	<mail:mail-session host="localhost" port="2525" username="test"
-		password="test" />
+    <security:rule-based-permission-resolver security-rules="#{securityRules}"/> 
+   
+    <security:identity authenticate-method="#{loginManagedBean.autenticar}" remember-me="true"/>
+   
+    <event type="org.jboss.seam.security.notLoggedIn">
+       <action execute="#{redirect.captureCurrentView}"/>
+    </event>
+    <event type="org.jboss.seam.security.loginSuccessful">
+       <action execute="#{redirect.returnToCapturedView}"/>
+    </event>
+
+	 <mail:mail-session host="localhost" port="2525" username="test"
+	 	password="test" />
 
 	<!-- For use with jBPM pageflow or process management -->
 	<!--  
