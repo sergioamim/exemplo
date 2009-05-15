@@ -28,7 +28,7 @@ public class EnqueteRepositorio {
 	@SuppressWarnings("unchecked")
 	@Transactional
 	public Enquete recuperaAtual(){
-		List<Enquete> enquetes = dataMapper.getEntityManager().createQuery("select e from Enquete e order by e.dataInclusao asc").getResultList();
+		List<Enquete> enquetes = dataMapper.getEntityManager().createQuery("select e from Enquete e order by e.dataInclusao desc").getResultList();
 		if(enquetes.size() > 0) {
 			return (Enquete) enquetes.get(0);
 		} else 

@@ -1,23 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<f:view contentType="text/html" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:a="http://richfaces.org/a4j"
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:s="http://jboss.com/products/seam/taglib"
-	xmlns:rich="http://richfaces.org/rich">
-	
-	<html>
-	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Exemplo</title>
-	<link rel="shortcut icon" href="#{request.contextPath}/favicon.ico" />
-	<a:loadStyle src="/stylesheet/theme.css" />
-	</head>
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" template="layout/template.xhtml">
 
-	<body>
-		<h:outputText value="tete" />
-	</body>
-	</html>
-</f:view>
+	
+
+	<ui:define name="blocoBody">
+		<h:outputText value="#{enqueteManageBean.enqueteAtual.pergunta}" />
+	
+		<h:selectOneRadio id="enqueteRadio" value="#{enqueteManageBean.opcaoSelecionada}">
+			<f:selectItems value="#{enqueteManageBean.enqueteAtual.opcoes}" />
+		</h:selectOneRadio>
+	</ui:define>
+
+</ui:composition>

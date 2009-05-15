@@ -77,7 +77,6 @@
 
 	<exception>
 		<redirect view-id="/error.xhtml">
-			<message>Unexpected error, please try again</message>
 		</redirect>
 	</exception>
 

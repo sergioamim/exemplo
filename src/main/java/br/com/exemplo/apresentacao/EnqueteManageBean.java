@@ -13,11 +13,12 @@ import org.jboss.seam.annotations.datamodel.DataModelSelection;
 import org.jboss.seam.faces.FacesMessages;
 
 import br.com.exemplo.dominio.entidade.Enquete;
+import br.com.exemplo.dominio.entidade.Opcao;
 import br.com.exemplo.dominio.exception.EntidadeJaCadastradaException;
 import br.com.exemplo.dominio.repositorio.EnqueteRepositorio;
 
 @Name("enqueteManageBean")
-@Scope(ScopeType.PAGE)
+@Scope(ScopeType.SESSION)
 public class EnqueteManageBean {
 	
 	@In(create=true)
@@ -28,10 +29,26 @@ public class EnqueteManageBean {
 	@DataModelSelection
 	private Enquete enquete;
 	
+	public Opcao getOpcaoSelecionada() {
+		return opcaoSelecionada;
+	}
+
+	public void setOpcaoSelecionada(Opcao opcaoSelecionada) {
+		this.opcaoSelecionada = opcaoSelecionada;
+	}
+
+	/*@In(create=true)
+	 */
+	@In(create=true)
+	@Out(value="opcao",required=false)
+	private Opcao opcao;
+	
+	private Opcao opcaoSelecionada;
+	
 	private String pesquisaNome;
 	
 	@DataModel
-	private List<Enquete> enquetes = new ArrayList<Enquete>();
+	private List<Enquete> enquetes;
 	
 	@In
 	private FacesMessages facesMessages;
@@ -83,12 +100,27 @@ public class EnqueteManageBean {
 	
 	}
 	
+	public void adcionarOpcao() {
+		enquete.getOpcoes().add(opcao);
+		opcao = new Opcao();
+	}
+	
+	public void removerOpcao() {
+		enquete.getOpcoes().remove(opcaoSelecionada);
+	}
 	
 	public void carregarEnquetes(){
-		if(enquetes.size()==0){
-			enquetes.clear();
-			enquetes.addAll(enqueteRepositorio.listar());
+		
+		if(enquetes == null){
+			enquetes = enqueteRepositorio.listar();
+			//enquetes = new ArrayList<Enquete>();
+			//enquetes.clear();
+			//enquetes.addAll();
 		}
+	}
+	
+	public Enquete getEnqueteAtual() {
+		return enqueteRepositorio.recuperaAtual();
 	}
 	
 	

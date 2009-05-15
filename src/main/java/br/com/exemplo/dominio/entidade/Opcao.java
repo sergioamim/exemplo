@@ -5,7 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import org.hibernate.validator.NotNull;
+import org.jboss.seam.annotations.Name;
 
+@Name("opcao")
 @Entity
 public class Opcao {
 	

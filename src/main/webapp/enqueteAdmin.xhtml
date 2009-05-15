@@ -86,6 +86,31 @@
 				<h:inputText id="txtNome" value="#{enquete.pergunta}" required="true"  />
 			</s:decorate>
 			
+			<s:decorate id="boxOpcao" template="layout/edit.xhtml">
+				<ui:define name="label">Opção</ui:define>
+				<h:inputText id="txtOpcao" value="#{opcao.opcao}"  />
+				<a:commandButton action="#{enqueteManageBean.adcionarOpcao}" value="Adicionar" ajaxSingle="true" reRender="gridCrud" />
+			</s:decorate>
+			
+			
+			<rich:dataTable id="tabelaOpcoes" value="#{enquete.opcoes}" var="opcao" rows="10">
+			
+				<rich:column width="50px" sortable="true" style="text-align:center;" >
+					<f:facet name="header">
+						<h:outputText value="Opção" />
+					</f:facet>
+					<h:outputText value="#{opcao.opcao}" />
+				</rich:column>
+				
+				<rich:column width="50px" sortable="true" style="text-align:center;" >
+					<f:facet name="header">
+						<h:outputText value="Remover" />
+					</f:facet>
+					 X
+				</rich:column>
+				
+			</rich:dataTable>	
+			
 			<h:panelGroup>
 				<a:commandButton action="#{enqueteManageBean.salvar}" value="#{enqueteManageBean.estadoDeInclusao ? 'Incluir' : 'Salvar'}" reRender="formCrudGenerico" />
 				<a:commandButton action="#{enqueteManageBean.pesquisar}" value="Voltar" reRender="formCrudGenerico" immediate="true" />
