@@ -26,7 +26,7 @@
         <facelets.version>1.1.14</facelets.version>
         <jsf.version>1.2_12</jsf.version>
         <richfaces.version>3.3.0.GA</richfaces.version>		
-        <hibernate.validator.version>3.1.0.GA</hibernate.validator.version>
+        <hibernate.validator.version>5.3.5.Final</hibernate.validator.version>
         <hibernate.emanager.version>3.4.0.GA</hibernate.emanager.version>
         <hibernate.annotations.version>3.4.0.GA</hibernate.annotations.version>
 		<log4j.version>1.2.13</log4j.version>
